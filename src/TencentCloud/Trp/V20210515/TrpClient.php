@@ -44,6 +44,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeCodePackUrlResponse DescribeCodePackUrl(Models\DescribeCodePackUrlRequest $req) 查询码包地址
  * @method Models\DescribeCodePacksResponse DescribeCodePacks(Models\DescribeCodePacksRequest $req) 查询码包列表
  * @method Models\DescribeCodesByPackResponse DescribeCodesByPack(Models\DescribeCodesByPackRequest $req) 查询码包的二维码列表，上限 3 万
+ * @method Models\DescribeCorpQuotasResponse DescribeCorpQuotas(Models\DescribeCorpQuotasRequest $req) 查询渠道商下属企业额度使用情况
  * @method Models\DescribeCustomRuleByIdResponse DescribeCustomRuleById(Models\DescribeCustomRuleByIdRequest $req) 查自定义码规则
  * @method Models\DescribeCustomRulesResponse DescribeCustomRules(Models\DescribeCustomRulesRequest $req) 查自定义码规则列表
  * @method Models\DescribeJobFileUrlResponse DescribeJobFileUrl(Models\DescribeJobFileUrlRequest $req) 获取异步任务的输出地址
@@ -51,6 +52,8 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
  * @method Models\DescribeProductByIdResponse DescribeProductById(Models\DescribeProductByIdRequest $req) 查询商品信息
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 查询商品列表
+ * @method Models\DescribeScanLogsResponse DescribeScanLogs(Models\DescribeScanLogsRequest $req) 查询扫码日志明细
+ * @method Models\DescribeScanStatsResponse DescribeScanStats(Models\DescribeScanStatsRequest $req) 查询某个批次被扫码的统计列表，没有被扫过的不会返回
  * @method Models\DescribeTmpTokenResponse DescribeTmpToken(Models\DescribeTmpTokenRequest $req) 查询临时Token，主要用于上传接口
  * @method Models\DescribeTraceCodeByIdResponse DescribeTraceCodeById(Models\DescribeTraceCodeByIdRequest $req) 查询二维码信息
  * @method Models\DescribeTraceCodesResponse DescribeTraceCodes(Models\DescribeTraceCodesRequest $req) 查询二维码列表
@@ -61,6 +64,8 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 编辑商户
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 编辑商品
  * @method Models\ModifyTraceCodeResponse ModifyTraceCode(Models\ModifyTraceCodeRequest $req) 冻结或者激活二维码，所属的批次的冻结状态优先级大于单个二维码的状态，即如果批次是冻结的，那么该批次下二维码的状态都是冻结的
+ * @method Models\ModifyTraceCodeUnlinkResponse ModifyTraceCodeUnlink(Models\ModifyTraceCodeUnlinkRequest $req) 解绑溯源码和批次的关系，让溯源码重置为未关联的状态，以便关联其他批次
+注意：溯源码必须属于指定的批次才会解绑
  * @method Models\ModifyTraceDataResponse ModifyTraceData(Models\ModifyTraceDataRequest $req) 修改溯源信息
  * @method Models\ModifyTraceDataRanksResponse ModifyTraceDataRanks(Models\ModifyTraceDataRanksRequest $req) 修改溯源信息的排序
  */
